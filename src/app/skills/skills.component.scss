@@ -1,0 +1,153 @@
+.skills {
+  padding: 6rem 1rem;
+}
+
+.skills .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skills .section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 900;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.skills .section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.skill i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.skill p {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Specific colors for each skill icon */
+.skill .fa-html5 { color: #E34F26; }
+.skill .fa-css3-alt { color: #1572B6; }
+.skill .fa-js { color: #F7DF1E; }
+.skill .fa-react { color: #61DAFB; }
+.skill .fa-angular { color: #DD0031; }
+.skill .fa-node-js { color: #339933; }
+.skill .fa-python { color: #3776AB; }
+.skill .fa-flask { color: #000000; }
+.skill .fa-java { color: #007396; }
+.skill .fa-code:nth-of-type(1) { color: #A8B9CC; } /* C */
+.skill .fa-code:nth-of-type(2) { color: #00599C; } /* C++ */
+.skill .fa-database:nth-of-type(1) { color: #47A248; } /* MongoDB */
+.skill .fa-database:nth-of-type(2) { color: #4479A1; } /* MySQL */
+.skill .fa-spring { color: #6DB33F; }
+.skill .fa-server { color: #336791; } /* SQL */
+.skill .fa-cogs { color: #0096D6; } /* RESTful APIs */
+
+/* Media queries remain the same */
+@media (max-width: 1200px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .skills {
+    padding: 5rem 1rem;
+  }
+
+  .skills .section-title {
+    font-size: 2.5rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .skill i {
+    font-size: 2.5rem;
+  }
+
+  .skill p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills {
+    padding: 4rem 1rem;
+  }
+
+  .skills .section-title {
+    font-size: 2rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .skills {
+    padding: 3rem 1rem;
+  }
+
+  .skills .section-title {
+    font-size: 1.8rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .skill {
+    padding: 1rem;
+  }
+
+  .skill i {
+    font-size: 2rem;
+  }
+
+  .skill p {
+    font-size: 0.9rem;
+  }
+}
